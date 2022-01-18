@@ -24,6 +24,14 @@
     "type": "console.page/route",
     "properties": {
       "exact": true,
+      "path": "/enabledApplications",
+      "component": { "$codeRef": "EnabledApplications" }
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
       "path": "/customization",
       "component": { "$codeRef": "CustomizationList" }
     }

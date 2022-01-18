@@ -1,5 +1,8 @@
-import React from 'react';
-import { QuestionCircleIcon, WarningTriangleIcon } from '@patternfly/react-icons';
+import * as React from 'react';
+import {
+  QuestionCircleIcon,
+  WarningTriangleIcon,
+} from '@patternfly/react-icons';
 import {
   PageSection,
   PageSectionVariants,

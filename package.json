@@ -16,6 +16,7 @@
     "@openshift-console/dynamic-plugin-sdk": "0.0.3",
     "@openshift-console/dynamic-plugin-sdk-webpack": "0.0.4",
     "@patternfly/react-core": "4.175.4",
+    "@patternfly/react-icons": "^4.32.1",
     "@types/node": "^16.11.13",
     "@types/react": "^17.0.37",
     "@types/react-helmet": "^6.1.4",
@@ -30,6 +31,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.27.1",
     "file-loader": "^6.2.0",
+    "node-sass": "^4.14.1",
     "prettier": "^2.5.1",
     "react": "17.0.1",
     "react-dom": "^17.0.1",
@@ -37,6 +39,7 @@
     "react-i18next": "^11.8.11",
     "react-router": "5.2.0",
     "react-router-dom": "5.2.0",
+    "sass-loader": "^7.3.1",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.4.0",
@@ -54,8 +57,8 @@
       "CustomizationList": "./components/CustomizationList",
       "CreateConsoleLinkPage": "./components/forms/CreateConsoleLinkPage",
       "CreateConsoleNotificationPage": "./components/forms/CreateConsoleNotificationPage",
-      "ApplicationsPage": "./pages/ApplicationsPage",
-      "EnabledApplications": "/pages/enabledApplications/EnabledApplications"
+      "EnabledApplications": "/pages/enabledApplications/EnabledApplications",
+      "perspective": "./utils/perspective"
     },
     "dependencies": {
       "@console/pluginAPI": "*"
