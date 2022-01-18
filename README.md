@@ -35,15 +35,15 @@ oc patch consoles.operator.openshift.io cluster --patch '{ "spec": { "plugins": 
 
 1. Build the image:
    ```sh
-   docker build -t quay.io/$USER/console-customization-plugin:latest .
+   docker build -t quay.io/$USER/odh-plugin:latest .
    ```
 2. Run the image:
    ```sh
-   docker run -it --rm -d -p 9001:80 quay.io/$USER/console-customization-plugin:latest
+   docker run -it --rm -d -p 9001:80 quay.io/$USER/odh-plugin:latest
    ```
 3. Push the image to image registry:
    ```sh
-   docker push quay.io/$USER/console-customization-plugin:latest
+   docker push quay.io/$USER/odh-plugin:latest
    ```
 
 Update and apply `manifest.yaml` to use a custom plugin image.

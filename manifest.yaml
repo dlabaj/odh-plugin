@@ -1,32 +1,32 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: console-customization-plugin
+  name: odh-plugin
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: console-customization-plugin
-  namespace: console-customization-plugin
+  name: odh-plugin
+  namespace: odh-plugin
   labels:
-    app: console-customization-plugin
-    app.kubernetes.io/component: console-customization-plugin
-    app.kubernetes.io/instance: console-customization-plugin
-    app.kubernetes.io/part-of: console-customization-plugin
-    app.openshift.io/runtime-namespace: console-customization-plugin
+    app: odh-plugin
+    app.kubernetes.io/component: odh-plugin
+    app.kubernetes.io/instance: odh-plugin
+    app.kubernetes.io/part-of: odh-plugin
+    app.openshift.io/runtime-namespace: odh-plugin
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: console-customization-plugin
+      app: odh-plugin
   template:
     metadata:
       labels:
-        app: console-customization-plugin
+        app: odh-plugin
     spec:
       containers:
-        - name: console-customization-plugin
-          image: quay.io/spadgett/console-customization-plugin:latest
+        - name: odh-plugin
+          image: quay.io/dlabaj/odh-plugin:latest
           ports:
             - containerPort: 9443
               protocol: TCP
@@ -60,10 +60,10 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: nginx-conf
-  namespace: console-customization-plugin
+  namespace: odh-plugin
   labels:
-    app: console-customization-plugin
-    app.kubernetes.io/part-of: console-customization-plugin
+    app: odh-plugin
+    app.kubernetes.io/part-of: odh-plugin
 data:
   nginx.conf: |
     error_log /dev/stdout info;
@@ -86,13 +86,13 @@ kind: Service
 metadata:
   annotations:
     service.alpha.openshift.io/serving-cert-secret-name: plugin-serving-cert
-  name: console-customization-plugin
-  namespace: console-customization-plugin
+  name: odh-plugin
+  namespace: odh-plugin
   labels:
-    app: console-customization-plugin
-    app.kubernetes.io/component: console-customization-plugin
-    app.kubernetes.io/instance: console-customization-plugin
-    app.kubernetes.io/part-of: console-customization-plugin
+    app: odh-plugin
+    app.kubernetes.io/component: odh-plugin
+    app.kubernetes.io/instance: odh-plugin
+    app.kubernetes.io/part-of: odh-plugin
 spec:
   ports:
     - name: 9443-tcp
@@ -100,7 +100,7 @@ spec:
       port: 9443
       targetPort: 9443
   selector:
-    app: console-customization-plugin
+    app: odh-plugin
   type: ClusterIP
   sessionAffinity: None
 ---
@@ -111,7 +111,7 @@ metadata:
 spec:
   displayName: 'OpenShift Console Customization Plugin'
   service:
-    name: console-customization-plugin
-    namespace: console-customization-plugin
+    name: odh-plugin
+    namespace: odh-plugin
     port: 9443
     basePath: '/'

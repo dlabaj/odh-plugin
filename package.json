@@ -1,8 +1,8 @@
 {
-  "name": "console-customization-plugin",
+  "name": "odh-plugin",
   "version": "0.0.1",
   "private": true,
-  "repository": "git@github.com:spadgett/console-customization-plugin.git",
+  "repository": "git@github.com:dlabaj/odh-plugin.git",
   "scripts": {
     "clean": "rm -rf dist",
     "build": "yarn clean && NODE_ENV=production yarn ts-node node_modules/.bin/webpack",
@@ -46,14 +46,16 @@
     "webpack-dev-server": "^4.6.0"
   },
   "consolePlugin": {
-    "name": "console-customization",
+    "name": "odh-plugin",
     "version": "0.0.1",
     "displayName": "OpenShift Console Customization Plugin",
     "description": "Allows you to work with ConsoleLink and other customization resources.",
     "exposedModules": {
       "CustomizationList": "./components/CustomizationList",
       "CreateConsoleLinkPage": "./components/forms/CreateConsoleLinkPage",
-      "CreateConsoleNotificationPage": "./components/forms/CreateConsoleNotificationPage"
+      "CreateConsoleNotificationPage": "./components/forms/CreateConsoleNotificationPage",
+      "ApplicationsPage": "./pages/ApplicationsPage",
+      "EnabledApplications": "/pages/enabledApplications/EnabledApplications"
     },
     "dependencies": {
       "@console/pluginAPI": "*"

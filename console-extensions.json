@@ -11,6 +11,16 @@
     }
   },
   {
+    "type": "console.perspective",
+    "properties": {
+      "id": "redhat-odh",
+      "name": "RedHat Data Science",
+      "icon": { "$codeRef": "perspective.icon" },
+      "landingPageURL": { "$codeRef": "perspective.getLandingPageURL" },
+      "importRedirectURL": { "$codeRef": "perspective.getImportRedirectURL" }
+    }
+  },
+  {
     "type": "console.page/route",
     "properties": {
       "exact": true,
