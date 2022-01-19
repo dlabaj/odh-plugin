@@ -1,7 +1,6 @@
-# OpenShift Console Customizations Plugin
+# Open Data Hub Plugin for OpenShift
 
-This project is a simple plugin that adds a Customizations nav item to the
-Administrator perspective in OpenShift console. It requires OpenShift 4.10 to
+This project is a the plugin version of Open Data Hub. It requires OpenShift 4.10 to
 use.
 
 ## Local development
