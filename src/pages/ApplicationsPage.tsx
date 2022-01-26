@@ -35,7 +35,10 @@ const ApplicationsPage: React.FC<ApplicationsPageProps> = ({
   children,
 }) => {
   const renderHeader = () => (
-    <PageSection className="odh-apps__heading" variant={PageSectionVariants.light}>
+    <PageSection
+      className="odh-apps__heading"
+      variant={PageSectionVariants.light}
+    >
       <TextContent className="odh-apps__heading__text">
         <Text component="h1">{title}</Text>
         <Text component="p">{description}</Text>
@@ -47,14 +50,19 @@ const ApplicationsPage: React.FC<ApplicationsPageProps> = ({
     if (loadError) {
       return (
         <PageSection>
-          <EmptyState variant={EmptyStateVariant.full} data-test-id="error-empty-state">
+          <EmptyState
+            variant={EmptyStateVariant.full}
+            data-test-id="error-empty-state"
+          >
             <EmptyStateIcon icon={WarningTriangleIcon} />
             <Title headingLevel="h5" size="lg">
               Error loading components
             </Title>
             <EmptyStateBody className="odh-dashboard__error-body">
               <div>
-                <code className="odh-dashboard__display-error">{loadError.message}</code>
+                <code className="odh-dashboard__display-error">
+                  {loadError.message}
+                </code>
               </div>
             </EmptyStateBody>
           </EmptyState>
@@ -65,7 +73,10 @@ const ApplicationsPage: React.FC<ApplicationsPageProps> = ({
     if (!loaded) {
       return (
         <PageSection isFilled>
-          <EmptyState variant={EmptyStateVariant.full} data-test-id="loading-empty-state">
+          <EmptyState
+            variant={EmptyStateVariant.full}
+            data-test-id="loading-empty-state"
+          >
             <Spinner size="xl" />
             <Title headingLevel="h5" size="lg">
               Loading
@@ -78,7 +89,10 @@ const ApplicationsPage: React.FC<ApplicationsPageProps> = ({
     if (empty) {
       return (
         <PageSection isFilled>
-          <EmptyState variant={EmptyStateVariant.full} data-test-id="empty-empty-state">
+          <EmptyState
+            variant={EmptyStateVariant.full}
+            data-test-id="empty-empty-state"
+          >
             <EmptyStateIcon icon={QuestionCircleIcon} />
             <Title headingLevel="h5" size="lg">
               No Components Found
