@@ -53,8 +53,6 @@ EnabledApplicationsInner.displayName = 'EnabledApplicationsInner';
 const EnabledApplications: React.FC = () => {
   const { components, loaded, loadError } = useWatchComponents(true);
 
-  debugger;
-  
   const sortedComponents = React.useMemo(() => {
     return _.cloneDeep(components).sort((a, b) =>
       a.spec.displayName.localeCompare(b.spec.displayName),
