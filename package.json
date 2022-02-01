@@ -29,6 +29,7 @@
     "classnames": "^2.2.6",
     "comment-json": "^4.1.1",
     "css-loader": "^6.5.1",
+    "dompurify": "^2.2.6",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -47,6 +48,7 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "sass-loader": "^7.3.1",
+    "showdown": "^1.9.1",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.4.0",
@@ -62,6 +64,7 @@
     "description": "Allows you to work with ConsoleLink and other customization resources.",
     "exposedModules": {
       "EnabledApplications": "/pages/enabledApplications/PluginEnabledApplications",
+      "ExploreApplications": "/pages/exploreApplication/PluginExploreApplications",
       "perspective": "./utilities/perspective"
     },
     "dependencies": {
