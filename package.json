@@ -63,7 +63,8 @@
     "displayName": "OpenShift Console Customization Plugin",
     "description": "Allows you to work with ConsoleLink and other customization resources.",
     "exposedModules": {
-      "EnabledApplications": "/pages/exploreApplication/PluginExploreApplications",
+      "EnabledApplications": "/pages/enabledApplications/PluginEnabledApplications",
+      "ExploreApplications": "/pages/exploreApplication/PluginExploreApplications",
       "perspective": "./utilities/perspective"
     },
     "dependencies": {

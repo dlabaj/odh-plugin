@@ -3,10 +3,28 @@
     "type": "console.perspective",
     "properties": {
       "id": "redhat-odh",
-      "name": "RedHat Data Science",
+      "name": "RedHat Data Scientist",
       "icon": { "$codeRef": "perspective.icon" },
       "landingPageURL": { "$codeRef": "perspective.getLandingPageURL" },
       "importRedirectURL": { "$codeRef": "perspective.getImportRedirectURL" }
+    }
+  },
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "enabled-applications",
+      "perspective": "redhat-odh",
+      "name": "Enabled Applications",
+      "href": "/enabledApplications"
+    }
+  },
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "explore-applications",
+      "perspective": "redhat-odh",
+      "name": "Explore Applications",
+      "href": "/exploreApplications"
     }
   },
   {
@@ -15,6 +33,14 @@
       "exact": true,
       "path": "/enabledApplications",
       "component": { "$codeRef": "EnabledApplications" }
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/exploreApplications",
+      "component": { "$codeRef": "ExploreApplications" }
     }
   }
 ]
